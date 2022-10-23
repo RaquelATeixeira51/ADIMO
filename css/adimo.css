@@ -8,3 +8,6 @@
 .active_user {
     color: #ffba00 !important;
 }
+#err_message{
+    color: #F00;   
+}

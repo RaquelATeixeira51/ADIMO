@@ -16,10 +16,10 @@ function loginUser(){
     const loginArray = login.split(",");
 
     if(name_login == loginArray[0] && senha_login == loginArray[2]){
-        console.log("Logado");
         sessionStorage.setItem("status", "logado");
         document.location.href = "/pages/index.html";
     }else{
-        console.log("Senha/email incorretos");
+        const error = document.getElementById("err_message");
+        error.innerHTML = "Usuário/Senha incorretos"
     }
 }
