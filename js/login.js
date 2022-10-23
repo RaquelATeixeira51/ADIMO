@@ -5,7 +5,7 @@ function registerUser(){
 
     sessionStorage.setItem("user", `${name_register},${email_register},${senha_register}`);
     sessionStorage.setItem("status", "logado");
-    document.location.href = "/pages/index.html";
+    document.location.href = "./index.html";
 }
 
 function loginUser(){
@@ -17,7 +17,7 @@ function loginUser(){
 
     if(name_login == loginArray[0] && senha_login == loginArray[2]){
         sessionStorage.setItem("status", "logado");
-        document.location.href = "/pages/index.html";
+        document.location.href = "./index.html";
     }else{
         const error = document.getElementById("err_message");
         error.innerHTML = "Usuário/Senha incorretos"
