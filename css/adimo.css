@@ -2,3 +2,9 @@
     width: 70px;
     height: 70px;
 }
+.nav-link{
+    color: #2F4F4F !important;
+}
+.active_user {
+    color: #ffba00 !important;
+}
