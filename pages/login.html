@@ -47,14 +47,41 @@
 								<input type="password" class="form-control" id="senha_register" name="senha" placeholder="Senha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'">
 							</div>
 							<div class="col-md-12 form-group">
-								<button type="button" onclick="registerUser()" class="primary-btn">Log In</button>
+								<button type="button" onclick="registerUser()" class="primary-btn">Cadastrar-se</button>
+							</div>
+							<div class="col-md-12 form-group">
+								<a class="funcionario-login" onclick="abrirFormFuncionario()">Você é um funcionário? Clique aqui.</a>
 							</div>
 						</form>
 					</div>
 				</div>
+				<div id="background-funcionario">
+					<div id="funcionario" class="col-lg-6 hidden">
+						<div class="login_form_inner form-funcionario-inner">
+							<div class="form-funcionario">
+								<h3>Faça o seu login</h3>
+								<span id="fechar" onclick="fechar()">[X]</span>
+							</div>
+							<form class="row login_form">
+								<div class="col-md-12 form-group">
+									<input type="text" class="form-control" id="funcionario_login" name="login" placeholder="Login do funcionário" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login do funcionário'">
+								</div>
+								<div class="col-md-12 form-group">
+									<input type="password" class="form-control" id="funcionario_senha" name="senha" placeholder="Senha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'">
+								</div>
+								<div class="col-md-12 form-group">
+									<p id="err_message_funcionario"></p>
+								</div>
+								<div class="col-md-12 form-group">
+									<button type="button" onclick="loginFuncionario()" class="primary-btn">Entrar</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
 				<div class="col-lg-6">
 					<div class="login_form_inner">
-						<h3>Log in to enter</h3>
+						<h3>Faça o seu login</h3>
 						<form class="row login_form">
 							<div class="col-md-12 form-group">
 								<input type="text" class="form-control" id="name_login" name="login" placeholder="Nome de Usuário" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome de Usuário'">
@@ -66,7 +93,7 @@
 								<p id="err_message"></p>
 							</div>
 							<div class="col-md-12 form-group">
-								<button type="button" onclick="loginUser()" class="primary-btn">Log In</button>
+								<button type="button" onclick="loginUser()" class="primary-btn">Entrar</button>
 								<a href="#">Esqueceu a Senha?</a>
 							</div>
 						</form>

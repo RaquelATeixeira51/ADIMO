@@ -23,3 +23,32 @@ function loginUser(){
         error.innerHTML = "Usuário/Senha incorretos"
     }
 }
+
+function abrirFormFuncionario(){
+    const form = document.getElementById("funcionario");
+    const back = document.getElementById("background-funcionario");
+    back.classList.add("show_back")
+    form.classList.remove("hidden");
+    form.classList.add("show_form")
+}
+
+function fechar(){
+    const form = document.getElementById("funcionario");
+    const back = document.getElementById("background-funcionario");
+    back.classList.remove("show_back")
+    form.classList.remove("show_form")
+    form.classList.add("hidden");
+}
+
+function loginFuncionario() {
+    const name_login = document.getElementById("funcionario_login").value;
+    const senha_login = document.getElementById("funcionario_senha").value;
+
+    if(name_login == "admin@example.com" && senha_login == "123Ab!"){
+        sessionStorage.setItem("statusAdmin", "logado");
+        document.location.href = "./index.html";
+    }else{
+        const error = document.getElementById("err_message_funcionario");
+        error.innerHTML = "Usuário/Senha incorretos"
+    }
+}

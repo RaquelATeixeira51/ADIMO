@@ -8,6 +8,50 @@
 .active_user {
     color: #ffba00 !important;
 }
-#err_message{
+#err_message, #err_message_funcionario{
     color: #F00;   
+}
+.section_gap{
+    padding: 130px 0;
+}
+.hidden {
+    display: none;
+}
+.show_form{
+    position: fixed;
+    top: 15%;
+    left: 25%;
+    z-index: 10000;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+.show_back {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(218, 165, 32, 0.748);
+    z-index: 100;
+}
+.funcionario-login{
+    cursor: pointer;
+}
+.form-funcionario{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.form-funcionario-inner{
+    padding-bottom: 15px;
+    padding-top: 80px !important;
+}
+#fechar{
+    cursor: pointer;
+}
+#fechar:hover{
+    color: #F00;
+    transform: rotateY(180deg);
+    transition: 0.5s;
 }
