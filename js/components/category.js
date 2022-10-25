@@ -76,7 +76,6 @@ for(let i = 0; i < products.length; i++) {
 function buscar(){
     const search = document.getElementById("search").value.toLowerCase();
     const filter = products.filter(product => product.name.includes(search));
-    console.log(filter);
     
     menu.innerHTML = "";
 
