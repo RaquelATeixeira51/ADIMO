@@ -55,3 +55,13 @@
     transform: rotateY(180deg);
     transition: 0.5s;
 }
+.user_image{
+    height: 110px;
+    width: 110px;
+    border-radius: 100% !important;
+    border: 1px solid #999 !important;
+    box-shadow: 5px 5px 15px rgba(171, 170, 168, 0.623)
+}
+.table{
+    margin-top: 50px;
+}
