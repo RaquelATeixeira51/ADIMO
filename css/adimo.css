@@ -79,3 +79,11 @@
 .sidebar-categories .head {
     padding: 15px 30px !important;
 }
+.footer_anchor {
+    color: #ff6c00;
+    font-size: 18px;
+    font-weight: 600;
+}
+.footer_paragraph{
+    margin-top: 25px;
+}
