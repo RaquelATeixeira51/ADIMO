@@ -50,11 +50,11 @@ for(let i = 0; i < products.length; i++) {
                     <h6 class="l-through">${products[i].price}</h6>
                 </div>
                 <div class="prd-bottom">
-                    <a href="" class="social-info">
+                    <a href="#" class="social-info">
                         <span class="lnr lnr-heart"></span>
                         <p class="hover-text">Wishlist</p>
                     </a>
-                    <a href="" class="social-info">
+                    <a href="#" class="social-info">
                         <span class="lnr lnr-move"></span>
                         <p class="hover-text">view more</p>
                     </a>
@@ -82,11 +82,11 @@ function buscar(){
                         <h6 class="l-through">${filter[i].price}</h6>
                     </div>
                     <div class="prd-bottom">
-                        <a href="" class="social-info">
+                        <a href="#" class="social-info">
                             <span class="lnr lnr-heart"></span>
                             <p class="hover-text">Wishlist</p>
                         </a>
-                        <a href="" class="social-info">
+                        <a href="#" class="social-info">
                             <span class="lnr lnr-move"></span>
                             <p class="hover-text">view more</p>
                         </a>
