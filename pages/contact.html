@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="../css/adimo.css">
 	<script defer src="../js/components/header.js"></script>
 	<script defer src="../js/components/footer.js"></script>
+	<script defer src="../js/sendMail.js"></script>
 </head>
 
 <body>
@@ -54,69 +55,33 @@
 					</div>
 				</div>
 				<div class="col-lg-9">
-					<form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+					<form class="row contact_form">
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'">
+								<input type="text" required class="form-control" id="name" name="name" placeholder="Insira o seu nome" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Insira o seu nome'">
 							</div>
 							<div class="form-group">
-								<input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'">
+								<input type="email" required class="form-control" id="email" name="email" placeholder="Insira o seu email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Insira o seu email'">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'">
+								<input type="text" required class="form-control" id="subject" name="subject" placeholder="Insira o assunto" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Insira o assunto'">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<textarea class="form-control" name="message" id="message" rows="1" placeholder="Enter Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'"></textarea>
+								<textarea required class="form-control" name="message" id="message" rows="1" placeholder="Insira uma mensagem" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Insira uma mensagem'"></textarea>
 							</div>
 						</div>
 						<div class="col-md-12 text-right">
-							<button type="submit" value="submit" class="primary-btn">Send Message</button>
+							<button type="submit" id="submit" value="submit" class="primary-btn">Enviar Mensagem</button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!--================Contact Area =================-->
-
 	
 	<footer class="footer-area section_gap"></footer>
-	
-
-	<!--================Contact Success and Error message Area =================-->
-	<div id="success" class="modal modal-message fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<i class="fa fa-close"></i>
-					</button>
-					<h2>Thank you</h2>
-					<p>Your message is successfully sent...</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Modals error -->
-
-	<div id="error" class="modal modal-message fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<i class="fa fa-close"></i>
-					</button>
-					<h2>Sorry !</h2>
-					<p> Something went wrong </p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!--================End Contact Success and Error message Area =================-->
-
 
 	<script src="../js/bootstrap/vendor/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
