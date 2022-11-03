@@ -31,7 +31,7 @@ const products = [
     },
     {
         img: "../img/product/apartamento-com-2-quartos-a-venda-35m-no-mooca-sao-paulo.jpg",
-        name: "apartamento com 2 1uartos à venda, 35m² - móoca",
+        name: "apartamento com 2 quartos à venda, 35m² - mooca",
         newPrice: "R$ 227.000", 
         price: "",
         area: "35m²",
@@ -51,7 +51,7 @@ const products = [
     },
     {
         img: "../img/product/apartamento-com-2-quartos-a-venda-74m-no-jardim-das-acacias-sao-paulo.webp",
-        name: "Apartamento com 2 Quartos à venda, 74m² - Jardim das Acacias",
+        name: "apartamento com 2 quartos à venda, 74m² - jardim das acacias",
         newPrice: "R$ 400.000", 
         price: "",
         area: "74m²",
@@ -74,10 +74,6 @@ for(let i = 0; i < products.length; i++) {
                     <h6 class="l-through">${products[i].price}</h6>
                 </div>
                 <div class="prd-bottom">
-                    <a href="#" class="social-info">
-                        <span class="lnr lnr-heart"></span>
-                        <p class="hover-text">Wishlist</p>
-                    </a>
                     <a href="#" onclick="register(${[i]})" class="social-info">
                         <span class="lnr lnr-move"></span>
                         <p class="hover-text">view more</p>
@@ -106,10 +102,6 @@ function buscar(){
                         <h6 class="l-through">${filter[i].price}</h6>
                     </div>
                     <div class="prd-bottom">
-                        <a href="#" class="social-info">
-                            <span class="lnr lnr-heart"></span>
-                            <p class="hover-text">Wishlist</p>
-                        </a>
                         <a href="#" onclick="register(${[i]})" class="social-info">
                             <span class="lnr lnr-move"></span>
                             <p class="hover-text">view more</p>

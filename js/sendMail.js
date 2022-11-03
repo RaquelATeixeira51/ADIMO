@@ -8,7 +8,7 @@ btnSubmit.addEventListener("click", function sendMail(){
         alert("Por favor preencha todos os campos!");
         return;
     }else{
-        alert("Email enviado");
         document.location.href = "./index.html";
+        alert("Email enviado");
     }
 })
