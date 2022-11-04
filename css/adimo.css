@@ -8,7 +8,7 @@
 .active_user {
     color: #ffba00 !important;
 }
-#err_message, #err_message_funcionario{
+#err_message, #err_message_funcionario, #err_message_recover{
     color: #F00;   
 }
 .section_gap{

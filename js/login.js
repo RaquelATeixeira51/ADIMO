@@ -32,8 +32,24 @@ function abrirFormFuncionario(){
     form.classList.add("show_form")
 }
 
+function abrirFormRecuperarSenha(){
+    const form = document.getElementById("esqueceuSenha");
+    const back = document.getElementById("background-funcionario");
+    back.classList.add("show_back")
+    form.classList.remove("hidden");
+    form.classList.add("show_form")
+}
+
 function fechar(){
     const form = document.getElementById("funcionario");
+    const back = document.getElementById("background-funcionario");
+    back.classList.remove("show_back")
+    form.classList.remove("show_form")
+    form.classList.add("hidden");
+}
+
+function fecharRecuperarSenha(){
+    const form = document.getElementById("esqueceuSenha");
     const back = document.getElementById("background-funcionario");
     back.classList.remove("show_back")
     form.classList.remove("show_form")
@@ -50,5 +66,25 @@ function loginFuncionario() {
     }else{
         const error = document.getElementById("err_message_funcionario");
         error.innerHTML = "Usuário/Senha incorretos"
+    }
+}
+
+function recoverSenha() {
+    const input_email = document.getElementById("recoverEmail").value;
+    const input_password = document.getElementById("recoverPassword").value;
+    const user = sessionStorage.getItem("user");
+    if(user){
+        const email = user.split(",")[1]
+        if(input_email == email){
+            const newPassword = user.split(",");
+            sessionStorage.setItem("user", `${newPassword[0]},${email},${input_password}`);
+            document.location.href = "./index.html"
+        }else{
+            const error = document.getElementById("err_message_recover");
+            error.innerHTML = "Usuário inexistente"
+        }
+    }else{
+        const error = document.getElementById("err_message_recover");
+        error.innerHTML = "Usuário inexistente"
     }
 }

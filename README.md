@@ -16,3 +16,5 @@ Usuário -> Imóvel -> Agenda visita à imobiliária (Criar página de agendamen
 - Criar página pra renderizar página de agendamento de visita do imóvel e ficha cadastral (ambos feitos pelo atendente);
 - Gerar score ficticio para definir crédito para cliente (Consultar documentação);
 - Exibir mensagem do sistema para reserva aprovada;
+- Criar página de faovritos e adicionar anchor no header
+- Mover parágrafo de bem vindo para próximo ao logout

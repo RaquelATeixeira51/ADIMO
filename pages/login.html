@@ -78,6 +78,28 @@
 							</form>
 						</div>
 					</div>
+					<div id="esqueceuSenha" class="col-lg-6 hidden">
+						<div class="login_form_inner form-funcionario-inner">
+							<div class="form-funcionario">
+								<h3>Recupere sua senha</h3>
+								<span id="fechar" onclick="fecharRecuperarSenha()">[X]</span>
+							</div>
+							<form class="row login_form">
+								<div class="col-md-12 form-group">
+									<input type="text" class="form-control" id="recoverEmail" name="email" placeholder="Digite seu email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Digite seu email'">
+								</div>
+								<div class="col-md-12 form-group">
+									<input type="password" class="form-control" id="recoverPassword" name="senha" placeholder="Digite sua nova Senha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Digite sua nova Senha'">
+								</div>
+								<div class="col-md-12 form-group">
+									<p id="err_message_recover"></p>
+								</div>
+								<div class="col-md-12 form-group">
+									<button type="button" onclick="recoverSenha()" class="primary-btn">Entrar</button>
+								</div>
+							</form>
+						</div>
+					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="login_form_inner">
@@ -94,7 +116,7 @@
 							</div>
 							<div class="col-md-12 form-group">
 								<button type="button" onclick="loginUser()" class="primary-btn">Entrar</button>
-								<a href="#">Esqueceu a Senha?</a>
+								<a href="#" onclick="abrirFormRecuperarSenha()">Esqueceu a Senha?</a>
 							</div>
 						</form>
 					</div>
