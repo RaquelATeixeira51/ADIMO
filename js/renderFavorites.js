@@ -47,11 +47,8 @@ function deletar(id) {
     /* Atualizar cache para nova lista de favoritos */
     const favoritesCache = sessionStorage.setItem("favoritos", "")
     for (let i = 0; i < remainFavorites.length; i++) {
-        if(favoritesCache.trim() != 0){
-            sessionStorage.setItem("favoritos", `${favoritesCache}%${JSON.stringify(remainFavorites[i])}`)
-        }else{
-            sessionStorage.setItem("favoritos", `${JSON.stringify(remainFavorites[i])}`)
-        }
+        const m = sessionStorage.setItem("favoritos", `${JSON.stringify(remainFavorites[i])}%`)
+        console.log(m);
     }
 
     const favoritesArray = [];
