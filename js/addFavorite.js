@@ -25,9 +25,3 @@ function favorite(index) {
         document.location.href = "./login.html"
     }
 }
-
-/* Aplicar função ao renderizar itens na lista de favoritos - Usar componente header.js */
-const mike = sessionStorage.getItem("favoritos").split("%");
-for (let i = 0; i < mike.length; i++) {
-    console.log(JSON.parse(mike[i]));
-}

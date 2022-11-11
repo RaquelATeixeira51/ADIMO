@@ -58,11 +58,12 @@ if(admin){
 								</button>
 								<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 									<ul class="nav navbar-nav menu_nav ml-auto">
-										<li class="nav-item active"><a class="nav-link">Bem vindo, <span class="active_user">${loginArray[0]}</span></a></li>
+									<li class="nav-item"><a class="nav-link" href="./favorites.html">Interesses</a></li>
 										<li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
 										<li class="nav-item"><a class="nav-link" href="./category.html">Imóveis</a></li>
 										<li class="nav-item"><a class="nav-link" href="./contact.html">Contato</a></li>
 										<li class="nav-item"><a class="nav-link" href="./about.html">Sobre</a></li>
+										<li class="nav-item active"><a class="nav-link">Bem vindo, <span class="active_user">${loginArray[0]}</span></a></li>
 										<li class="nav-item"><a class="nav-link" onclick="logout()" href="#">Logout</a></li>
 									</ul>
 								</div>
@@ -120,13 +121,3 @@ if(admin){
 	</div>`
 	}
 }
-
-{/* <li class="nav-item submenu dropdown">
-	<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-		aria-expanded="false">Pages</a>
-	<ul class="dropdown-menu">
-		<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-		<li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a></li>
-		<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-	</ul>
-</li> */}
