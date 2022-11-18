@@ -3,8 +3,10 @@ function render(){
     const favoritesTable = document.getElementById("favorites_table");
     const favoritesArray = [];
     for (let i = 0; i < favorites.length; i++) {
-        const object = JSON.parse(favorites[i])
-        favoritesArray.push(object);
+        if(favorites[i] != ""){
+            const object = JSON.parse(favorites[i])
+            favoritesArray.push(object);
+        }
     }
     for (let i = 0; i < favoritesArray.length; i++) {
         favoritesTable.innerHTML = favoritesTable.innerHTML + `
@@ -42,56 +44,20 @@ render();
 
 function deletar(id) {
     const favorites = sessionStorage.getItem("favoritos").split("%");
-    const favoritesTable = document.getElementById("favorites_table");
     const favoritesArray = [];
-
     for (let i = 0; i < favorites.length; i++) {
-        const object = JSON.parse(favorites[i])
-        favoritesArray.push(object);
+        if(favorites[i] != ""){
+            favoritesArray.push(favorites[i]);
+        }
     }
-    for (let i = 0; i < favoritesArray.length; i++) {
-        if(i === id){
-            favoritesArray.splice(i, 1);
-        }        
-    }
-    var newFavoritesList = "";
-    for (let i = 0; i < favoritesArray.length; i++) {
-        newFavoritesList = newFavoritesList+"%"+JSON.stringify(favoritesArray[i]);       
-    }
-    console.log(newFavoritesList);
-    const m = newFavoritesList.slice(1, 1);
-    console.log("Olá",m);
+    favoritesArray.splice(id, 1);
+    sessionStorage.removeItem("favoritos");
 
-    favoritesTable.innerHTML = "";
-    for (let i = 0; i < newFavoritesArr.length; i++) {
-        favoritesTable.innerHTML = favoritesTable.innerHTML + `
-        <tr>
-            <td>
-                <div class="media">
-                <div class="media-body">
-                    <img class="favorite-img" src="${newFavoritesArr[i].img}">
-                </div>
-                </div>
-            </td>
-            <td>
-                <div class="product_count">
-                <p>${newFavoritesArr[i].name}</p>
-                </div>
-            </td>
-            <td>
-                <div class="product_count">
-                <p>${newFavoritesArr[i].area}</p>
-                </div>
-            </td>
-            <td>
-                <div class="product_count">
-                <p>${newFavoritesArr[i].quartos}</p>
-                </div>
-            </td>
-            <td>
-                <a href="#" onclick="deletar(${[i]})" class="genric-btn danger circle">[X]</a>
-            </td>
-        </tr>`
+    let newFav = ""
+    for (let i = 0; i < favoritesArray.length; i++) {
+        newFav = `${newFav}%${favoritesArray[i]}`    
     }
-    console.log("Tchau",favoritesArray);
+    sessionStorage.setItem("favoritos", newFav);
+
+    window.location.href = "./favorites.html";
 }
