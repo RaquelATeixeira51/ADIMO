@@ -1,5 +1,5 @@
-const favorites = sessionStorage.getItem("favoritos").split("%");
 function render(){
+    const favorites = sessionStorage.getItem("favoritos").split("%");
     const favoritesTable = document.getElementById("favorites_table");
     const favoritesArray = [];
     for (let i = 0; i < favorites.length; i++) {
@@ -39,33 +39,30 @@ function render(){
 }
 render();
 
+
 function deletar(id) {
-    const favoritesArr = [];
-    for (let i = 0; i < favorites.length; i++) {
-        if(i == id){
-            console.log(true);
-        }else{
-            favoritesArr.push(JSON.parse(favorites[i]));      
-        }
-    }
-    var newList = "";
-
-    for (let i = 0; i < favoritesArr.length; i++) {
-        newList = newList + JSON.stringify(favoritesArr[i]) + "%"   
-    }
-
-    sessionStorage.removeItem("favoritos");
-    sessionStorage.setItem("favoritos", newList);
-
+    const favorites = sessionStorage.getItem("favoritos").split("%");
     const favoritesTable = document.getElementById("favorites_table");
-    const newFavorites = sessionStorage.getItem("favoritos").split("%")
-    const newFavoritesArr = [];
+    const favoritesArray = [];
 
-    for (let i = 0; i < newFavorites.length - 1; i++) {
-        const object = JSON.parse(newFavorites[i])
-        newFavoritesArr.push(object);
+    for (let i = 0; i < favorites.length; i++) {
+        const object = JSON.parse(favorites[i])
+        favoritesArray.push(object);
     }
-    console.log(newFavoritesArr);
+    for (let i = 0; i < favoritesArray.length; i++) {
+        if(i === id){
+            favoritesArray.splice(i, 1);
+        }        
+    }
+    var newFavoritesList = "";
+    for (let i = 0; i < favoritesArray.length; i++) {
+        newFavoritesList = newFavoritesList+"%"+JSON.stringify(favoritesArray[i]);       
+    }
+    console.log(newFavoritesList);
+    const m = newFavoritesList.slice(1, 1);
+    console.log("Olá",m);
+
+    favoritesTable.innerHTML = "";
     for (let i = 0; i < newFavoritesArr.length; i++) {
         favoritesTable.innerHTML = favoritesTable.innerHTML + `
         <tr>
@@ -95,5 +92,6 @@ function deletar(id) {
                 <a href="#" onclick="deletar(${[i]})" class="genric-btn danger circle">[X]</a>
             </td>
         </tr>`
-    }    
+    }
+    console.log("Tchau",favoritesArray);
 }
