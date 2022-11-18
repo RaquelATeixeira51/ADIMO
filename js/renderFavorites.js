@@ -35,11 +35,24 @@ function render(){
             </td>
             <td>
                 <a href="#" onclick="deletar(${[i]})" class="genric-btn danger circle">[X]</a>
+                <a href="#" onclick="agendar(${[i]})" class="genric-btn primary circle">Agendar</a>
             </td>
         </tr>`
     }
 }
 render();
+
+function agendar(id){
+    const favorites = sessionStorage.getItem("favoritos").split("%");
+    const favoritesArray = [];
+    for (let i = 0; i < favorites.length; i++) {
+        if(favorites[i] != ""){
+            favoritesArray.push(favorites[i]);
+        }
+    }
+    sessionStorage.setItem("booking", favoritesArray[id]);
+    window.location.href = "./booking.html";
+}
 
 
 function deletar(id) {
@@ -92,6 +105,7 @@ function deletar(id) {
             </td>
             <td>
                 <a href="#" onclick="deletar(${[i]})" class="genric-btn danger circle">[X]</a>
+                <a href="#" onclick="agendar(${[i]})" class="genric-btn primary circle">Agendar</a>
             </td>
         </tr>`
     }

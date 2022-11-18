@@ -119,3 +119,20 @@
     height: 200px;
     border-radius: 20px;
 }
+.form{
+    width: 50%;
+    margin: 80px auto 0 auto;
+    border: 1px solid rgba(153, 153, 153, 0.80);
+    padding: 40px 15px;
+    border-radius: 15px;
+}
+label[for="data"]{
+    margin-right: 20px;
+}
+#imovel{
+    height: 250px;
+}
+.imovel-img{
+    width: 150px;
+    border-radius: 10px;
+}

@@ -107,41 +107,49 @@ function deletar(id) {
             </td>
             <td>
                 <a href="#" onclick="deletar(${remainBookings[i].id})" class="genric-btn danger circle">Excluir agendamento</a>
+                <a href="#" onclick="agendarFake(${remainBookings[i].id})" class="genric-btn success circle">Preencher Formulário do cliente</a>
             </td>
         </tr>`
     }
 }
 
+function render(){
+    const bookingsTable = document.getElementById("bookings_table");
+    for (let i = 0; i < bookings.length; i++) {
+        bookingsTable.innerHTML = bookingsTable.innerHTML + `
+        <tr>
+            <td>
+                <div class="media">
+                <div class="media-body">
+                    <p>${bookings[i].name}</p>
+                </div>
+                </div>
+            </td>
+            <td>
+                <div class="product_count">
+                <p>${bookings[i].email}</p>
+                <p>${bookings[i].telefone}</p>
+                </div>
+            </td>
+            <td>
+                <div class="product_count">
+                <p>${bookings[i].imovel}</p>
+                </div>
+            </td>
+            <td>
+                <div class="product_count">
+                <p>${bookings[i].horario}</p>
+                </div>
+            </td>
+            <td>
+                <a href="#" onclick="deletar(${bookings[i].id})" class="genric-btn danger circle">Excluir agendamento</a>
+                <a href="#" onclick="agendarFake(${bookings[i].id})" class="genric-btn success circle">Preencher Formulário do cliente</a>
+            </td>
+        </tr>`
+    }
+}
+render()
 
-const bookingsTable = document.getElementById("bookings_table");
-for (let i = 0; i < bookings.length; i++) {
-    bookingsTable.innerHTML = bookingsTable.innerHTML + `
-    <tr>
-        <td>
-            <div class="media">
-            <div class="media-body">
-                <p>${bookings[i].name}</p>
-            </div>
-            </div>
-        </td>
-        <td>
-            <div class="product_count">
-            <p>${bookings[i].email}</p>
-            <p>${bookings[i].telefone}</p>
-            </div>
-        </td>
-        <td>
-            <div class="product_count">
-            <p>${bookings[i].imovel}</p>
-            </div>
-        </td>
-        <td>
-            <div class="product_count">
-            <p>${bookings[i].horario}</p>
-            </div>
-        </td>
-        <td>
-            <a href="#" onclick="deletar(${bookings[i].id})" class="genric-btn danger circle">Excluir agendamento</a>
-        </td>
-    </tr>`
+function agendarFake(id){
+    alert("Houve um erro ao acessar o agendamento, tente novamente mais tarde");
 }

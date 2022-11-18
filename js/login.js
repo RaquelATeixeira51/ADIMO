@@ -60,7 +60,7 @@ function loginFuncionario() {
     const name_login = document.getElementById("funcionario_login").value;
     const senha_login = document.getElementById("funcionario_senha").value;
 
-    if(name_login == "admin_example" && senha_login == "123Ab!"){
+    if(name_login == "admin_example" && senha_login == "1234"){
         sessionStorage.setItem("statusAdmin", "logado");
         document.location.href = "./index.html";
     }else{
