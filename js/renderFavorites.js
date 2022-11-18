@@ -44,6 +44,7 @@ render();
 
 function deletar(id) {
     const favorites = sessionStorage.getItem("favoritos").split("%");
+    const favoritesTable = document.getElementById("favorites_table");
     const favoritesArray = [];
     for (let i = 0; i < favorites.length; i++) {
         if(favorites[i] != ""){
@@ -59,5 +60,39 @@ function deletar(id) {
     }
     sessionStorage.setItem("favoritos", newFav);
 
-    window.location.href = "./favorites.html";
+    for (let i = 0; i < favoritesArray.length; i++) {
+        favoritesArray[i] = JSON.parse(favoritesArray[i]);
+    }
+
+    favoritesTable.innerHTML = "";
+    for (let i = 0; i < favoritesArray.length; i++) {
+        favoritesTable.innerHTML = favoritesTable.innerHTML + `
+        <tr>
+            <td>
+                <div class="media">
+                <div class="media-body">
+                    <img class="favorite-img" src="${favoritesArray[i].img}">
+                </div>
+                </div>
+            </td>
+            <td>
+                <div class="product_count">
+                <p>${favoritesArray[i].name}</p>
+                </div>
+            </td>
+            <td>
+                <div class="product_count">
+                <p>${favoritesArray[i].area}</p>
+                </div>
+            </td>
+            <td>
+                <div class="product_count">
+                <p>${favoritesArray[i].quartos}</p>
+                </div>
+            </td>
+            <td>
+                <a href="#" onclick="deletar(${[i]})" class="genric-btn danger circle">[X]</a>
+            </td>
+        </tr>`
+    }
 }
