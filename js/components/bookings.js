@@ -78,6 +78,8 @@ function deletar(id) {
     }
     const remainBookings = bookings;
     const bookingsTable = document.getElementById("bookings_table");
+    const realBooking = renderBooking()
+    console.log(realBooking);
     bookingsTable.innerHTML = "";
     for (let i = 0; i < remainBookings.length; i++) {
         bookingsTable.innerHTML = bookingsTable.innerHTML + `
@@ -111,6 +113,7 @@ function deletar(id) {
             </td>
         </tr>`
     }
+    bookingsTable.innerHTML = realBooking + bookingsTable.innerHTML
 }
 
 function render(){
@@ -147,9 +150,50 @@ function render(){
             </td>
         </tr>`
     }
+    bookingsTable.innerHTML = renderBooking() + bookingsTable.innerHTML;
 }
 render()
 
 function agendarFake(id){
     alert("Houve um erro ao acessar o agendamento, tente novamente mais tarde");
+}
+
+function renderBooking(){
+    const booking = JSON.parse(sessionStorage.getItem("booking"));
+    const clientContact = sessionStorage.getItem("clientContact").split("%");
+    const user = sessionStorage.getItem("user").split(",");
+    if(booking && clientContact){
+        return `
+        <tr>
+            <td>
+                <div class="media">
+                <div class="media-body">
+                    <p>${user[0]}</p>
+                </div>
+                </div>
+            </td>
+            <td>
+                <div class="product_count">
+                <p>${user[1]}</p>
+                <p>${clientContact[0]}</p>
+                </div>
+            </td>
+            <td>
+                <div class="product_count">
+                <p class="booking-name">${booking.name}</p>
+                </div>
+            </td>
+            <td>
+                <div class="product_count">
+                <p>${clientContact[1]}</p>
+                </div>
+            </td>
+            <td>
+                <a href="#" class="genric-btn danger circle">Excluir agendamento</a>
+                <a href="#" class="genric-btn success circle">Preencher Formulário do cliente</a>
+            </td>
+        </tr>`
+    }else{
+        return "";
+    }
 }

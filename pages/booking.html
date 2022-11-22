@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -38,15 +38,15 @@
                 <div id="imovel"></div>
                 <div class="form-group">
                     <label for="telefone">Telefone</label>
-                    <input type="text" class="form-control" id="telefone">
+                    <input required type="text" class="form-control" id="telefone" maxlength="11">
                 </div>
                 <div class="form-inline form-group">
                     <label for="data">Data:</label>
-                    <input type="date" class="form-control" id="data">
-                    <input type="time" class="form-control" id="horario">
+                    <input required type="date" class="form-control" id="data">
+                    <input required type="time" class="form-control" id="horario">
                 </div>
                 <div class="form-group">
-                    <input class="genric-btn primary circle" type="button" onclick="agendar()" value="Agendar">
+                    <input class="genric-btn primary circle form-btn" type="button" onclick="agendar()" value="Agendar">
                 </div>
             </form>
         </div>

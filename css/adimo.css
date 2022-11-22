@@ -130,9 +130,27 @@ label[for="data"]{
     margin-right: 20px;
 }
 #imovel{
-    height: 250px;
+    height: 300px;
 }
 .imovel-img{
     width: 150px;
     border-radius: 10px;
+}
+.imovel-name{
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.old-price{
+    color: #999;
+    text-decoration: line-through;
+}
+.new-price{
+    margin-top: 5px;
+}
+.form-btn{
+    width: 100%;
+}
+.booking-name{
+    text-transform: capitalize;
 }
