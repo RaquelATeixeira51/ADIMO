@@ -154,3 +154,61 @@ label[for="data"]{
 .booking-name{
     text-transform: capitalize;
 }
+
+.genric-btn.success {
+    color: #fff;
+    background: #4cd3e3;
+    border: 1px solid transparent;
+    margin-top: 5px;
+}
+
+.categories_post img {
+    max-width: 100%;
+}
+
+.sidebar-categories .head {
+    line-height: 60px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.sidebar-categories .head {
+    line-height: 60px;
+    background: #FFFFFF;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.filter-bar {
+    padding: 0px 20px 10px;
+    background: #fff;
+}
+
+.single-product .product-details .prd-bottom .social-info span {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #ffba00;
+    border-radius: 50%;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+    z-index: 1;
+}
+
+.contact_form .form-group .form-control {
+    font-size: 13px;
+    line-height: 26px;
+    color: #999;
+    border: 1px solid #eeeeee;
+    font-family: "Roboto", sans-serif;
+    border-radius: 0px;
+    padding-left: 20px;
+    border-color: black;
+}
