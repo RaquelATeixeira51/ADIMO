@@ -212,3 +212,10 @@ label[for="data"]{
     padding-left: 20px;
     border-color: black;
 }
+#container{
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.credito{
+    margin-top: 70px;
+}

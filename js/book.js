@@ -32,5 +32,6 @@ function agendar(){
     const formatedDate = dateFormat(data); 
     const horario = document.getElementById("horario").value;
 
-    sessionStorage.setItem("clientContact", `${formatedTel}%${formatedDate} - ${horario}`)
+    sessionStorage.setItem("clientContact", `${formatedTel}%${formatedDate} - ${horario}`);
+    document.location.href = "./favorites.html";
 }

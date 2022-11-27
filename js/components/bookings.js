@@ -190,7 +190,7 @@ function renderBooking(){
             </td>
             <td>
                 <a href="#" class="genric-btn danger circle">Excluir agendamento</a>
-                <a href="#" class="genric-btn success circle">Preencher Formulário do cliente</a>
+                <a href="form.html" class="genric-btn success circle">Preencher Formulário do cliente</a>
             </td>
         </tr>`
     }else{
