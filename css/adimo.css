@@ -219,3 +219,9 @@ label[for="data"]{
 .credito{
     margin-top: 70px;
 }
+
+.category-area h2 {
+    margin-left: 450px;
+    margin-bottom: 30px;
+    margin-top: -60px;
+}
