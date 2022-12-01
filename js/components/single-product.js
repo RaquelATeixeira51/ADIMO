@@ -16,7 +16,7 @@ if (product) {
                     <h3 class="major">${product.name}</h3>
                     <h2>${product.newPrice}</h2>
                     <div class="card_area d-flex align-items-center">
-                        <a class="primary-btn" href="./contact.html">Agende sua Reserva</a>
+                        <a class="primary-btn" onclick="agendar()">Agende uma visita</a>
                     </div>
                 </div>
             </div>
@@ -88,4 +88,9 @@ if (product) {
             </div>
         </div>
     </div>`
+}
+
+function agendar() {
+    sessionStorage.setItem("booking", JSON.stringify(product))
+    document.location.href = "./booking.html"
 }
